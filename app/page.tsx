@@ -34,16 +34,23 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="p-6 md:p-10">
-        <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {["TUI (Text-Based UI)", "Blog Website (Docker)", "Configuration Management", "Deploy Kubernetes using Jenkins", "Build CI/CD Pipeline", "Containerizing Applications"].map((project, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-              <h3 className="text-xl font-semibold text-blue-300">{project}</h3>
-              <p className="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          ))}
-        </div>
-      </section>
+  <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      { title: "TUI (Text-Based UI)", description: "A terminal-based UI application for managing tasks efficiently." },
+      { title: "Blog Website (Docker)", description: "A fully containerized blog website running on Docker." },
+      { title: "Configuration Management", description: "Automating system configurations using Ansible and Terraform." },
+      { title: "Deploy Kubernetes using Jenkins", description: "CI/CD pipeline to deploy applications on Kubernetes using Jenkins." },
+      { title: "Build CI/CD Pipeline", description: "End-to-end automated CI/CD pipeline for deploying applications." },
+      { title: "Containerizing Applications", description: "Dockerizing applications to enhance portability and scalability." },
+    ].map((project, index) => (
+      <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <h3 className="text-xl font-semibold text-blue-300">{project.title}</h3>
+        <p className="mt-2 text-gray-400">{project.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Resume Section */}
       <section className="p-6 md:p-10 text-center">
