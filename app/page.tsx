@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -66,6 +67,10 @@ export default function Home() {
           <a href="mailto:shreysharma701425@gmail.com" className="bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-600 transition">Email</a>
         </div>
       </section>
+
+      {/* Tidio Chat Script */}
+      <Script src="//code.tidio.co/yscqb4g3h4fwtkamraz6xgmus3q72irm.js" strategy="lazyOnload" />
+
     </div>
   );
 }
